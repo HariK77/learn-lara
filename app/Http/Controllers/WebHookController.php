@@ -15,9 +15,9 @@ class WebHookController extends Controller
         ];
 
         $result = WebhookCall::create()
-        ->url(env('WEBHOOK_URL').'/webhook-receive')
+        ->url(env('WEBHOOK_URL').'/webhook-receiver')
         ->payload($payload)
-        ->useSecret(env('UBER_API_CLIENT_SECRET'))
+        ->useSecret(env('WEBHOOK_CLIENT_SECRET'))
         ->dispatch();
 
         dd($result, "Web Hook has been called");
