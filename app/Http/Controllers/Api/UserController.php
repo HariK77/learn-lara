@@ -60,7 +60,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        sleep(2);
+        // sleep(2);
         $rules = array(
             'name' => 'required|string|max:50',
             'email' => 'required|string|email|max:100|unique:users',
@@ -96,7 +96,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        sleep(2);
+        // sleep(2);
         if (!$user) {
             return response()->json(['message' => 'user not found'], 404);
         }
@@ -111,7 +111,7 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        sleep(2);
+        // sleep(2);
         return response()->json($user, 200);
     }
 
@@ -125,7 +125,7 @@ class UserController extends Controller
     public function update(Request $request, User $user)
     {
         // dd($request->all());
-        sleep(2);
+        // sleep(2);
         $rules = array(
             'name' => 'required|string|max:50',
             'email' => 'required|string|email|max:100|unique:users,email,'.$user->id,
@@ -168,7 +168,7 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        sleep(2);
+        // sleep(2);
         $user->delete();
         $data = array(
             'message' => "User deleted Successfully !!",
