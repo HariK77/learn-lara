@@ -27,7 +27,7 @@ return [
     /*
      * This is the name of the header where the signature will be added.
      */
-    'signature_header_name' => env('UBER_WEBHOOK_CLIENT_SIGNATURE'),
+    'signature_header_name' => env('WEBHOOK_CLIENT_SIGNATURE'),
 
     /*
      * These are the headers that will be added to all webhook requests.
